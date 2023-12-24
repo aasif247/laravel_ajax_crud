@@ -12,11 +12,6 @@ class DashboardController extends Controller
     {
         $users = User::get();
         $roles = Roles::get();
-//        return response()->json($users);
-
         return view('dashboard',compact('users','roles'));
-//        return view('dashboard_old',compact('users','roles'));
-//        return view('user',compact('users','roles'));
-
     }
 }
