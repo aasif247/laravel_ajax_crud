@@ -17,17 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[DashboardController::class, 'index']);
 
-//Route::get('/user/list', [UserController::class, 'getUserList'])->name('user.list');
-//
-//Route::get('get-user-details',[UserController::class, 'getUserDetails'])->name('user.details');
-
-
 Route::post('/user/add', [UserController::class, 'addUser'])->name('users.store');
 Route::get('user-datatable',[UserController::class, 'datatable'])->name('user.datatable');
-
 Route::put('/user/edit/{user}', [UserController::class, 'editUser'])->name('user.edit');
 Route::put('/user/update', [UserController::class, 'updateUser'])->name('user.update');
-
 Route::delete('/user/delete/{user}', [UserController::class, 'deleteUser'])->name('user.delete');
 
 
